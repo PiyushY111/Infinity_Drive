@@ -52,8 +52,10 @@ export function processInputs() {
   }
   if(keys.up) {
     gameState.speed = Math.min(gameState.speed + gameState.acceleration, gameState.maxSpeed);
-  }
-  if(keys.down) {
+  } else if(keys.down) {
     gameState.speed = Math.max(gameState.speed - gameState.acceleration, 0);
+  } else {
+    // Automatically decelerate when no acceleration key is pressed
+    gameState.speed = Math.max(gameState.speed - gameState.friction, 0);
   }
 }
