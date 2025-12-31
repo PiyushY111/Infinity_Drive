@@ -1,7 +1,7 @@
 // Game state
 export const gameState = {
   speed: 0,
-  maxSpeed: 1.20,
+  maxSpeed: 0.70,
   acceleration: 0.015,
   friction: 0.003,
   laneX: [-3, 0, 3],
